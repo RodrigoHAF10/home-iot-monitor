@@ -1,0 +1,15 @@
+<tbody>
+{% for device in registered_devices %}
+    <tr>
+        <td>
+            <a href="{% url 'device_dashboard' device_id=device.unique_id %}">
+                {{ device.name }}
+            </a>
+        </td>
+        
+        <td>{{ device.unique_id }}</td>
+        
+        <td>{{ device.type }}</td>
+        </tr>
+{% endfor %}
+</tbody>
